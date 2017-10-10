@@ -1,2 +1,2 @@
-# interactive_portal
+# Interactive Portal
 MEAN development
