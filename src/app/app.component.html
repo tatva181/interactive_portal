@@ -1,0 +1,13 @@
+<div class="container col-sm-12" [ngClass] = "{'home': ifHome()}">
+	<header *ngIf="!ifHome()" class="row" style="clear: both;">
+		<header-component></header-component>
+	</header>
+	<div class="main" style="clear: both;">
+		<router-outlet>
+
+		</router-outlet>
+	</div>
+	<footer *ngIf="!ifHome()" class="row" style="clear: both;">
+		<footer-component></footer-component>
+	</footer>
+</div>

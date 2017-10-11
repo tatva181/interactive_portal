@@ -1,0 +1,19 @@
+*{
+	transition: all 0.3s ease-in-out;
+}
+body {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#273458+1,305a83+12,2e6b98+24,5aa2b5+50,5aa2b5+50,5aa2b5+50,8a257f+74,4c1960+100 */
+	background: #273458;
+	/* Old browsers */
+	background: -moz-linear-gradient(45deg, #273458 1%, #305a83 12%, #2e6b98 24%, #5aa2b5 50%, #5aa2b5 50%, #5aa2b5 50%, #8a257f 74%, #4c1960 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #273458 1%, #305a83 12%, #2e6b98 24%, #5aa2b5 50%, #5aa2b5 50%, #5aa2b5 50%, #8a257f 74%, #4c1960 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #273458 1%, #305a83 12%, #2e6b98 24%, #5aa2b5 50%, #5aa2b5 50%, #5aa2b5 50%, #8a257f 74%, #4c1960 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273458', endColorstr='#4c1960', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+}
+.main{
+	color: #fff !important;
+}
