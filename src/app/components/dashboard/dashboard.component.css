@@ -1,73 +1,77 @@
-.nav-menu {
-	font-size: 40px;
-	color: #D8D8D8;
-	padding-left: 20px;
-    padding-right: 20px;
-}
-.search {
-    font-size: 36px;
-    color: #D8D8D8;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-a {
-	transition: all 0.3s ease;
-}
-
-body {
-	font: 20px Montserrat, sans-serif;
-	line-height: 1.8;
-	color: #f5f6f7;
-}
-
-p {
-	font-size: 16px;
+.categories {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#272727+0,272727+38,000000+63,000000+100 */
+	background: #272727;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #272727 0%, #272727 38%, #000000 63%, #000000 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #272727 0%, #272727 38%, #000000 63%, #000000 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #272727 0%, #272727 38%, #000000 63%, #000000 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272727', endColorstr='#000000', GradientType=0);
+	/* IE6-9 */
+	border: none;
+	height: 800px;
+	border-radius: 8px;
+	padding: 10% 7%;
+	cursor: pointer;
+	clear: all;
+	margin-bottom: 10px;
 }
 
-.margin {
-	margin-bottom: 45px;
+.categories:hover .category-text, .categories:hover .category-text-strong {
+	/*text-shadow:0px 0px 10px #b431ae;*/
+	color: #00e6e6;
 }
 
-.bg-1 {
-	background-color: #1abc9c;
-	/* Green */
-	color: #ffffff;
+.dashboard-wrapper {
+	height: 85%;
+	padding: 10px 10px;
+	clear: all;
 }
 
-.bg-2 {
-	background-color: #474e5d;
-	/* Dark Blue */
-	color: #ffffff;
+.category-text {
+	font-size: 60px;
+	letter-spacing: 1;
 }
 
-.bg-3 {
-	background-color: #ffffff;
-	/* White */
-	color: #555555;
+.category-text-strong {
+	font-size: 70px;
+	letter-spacing: 2;
+	margin-top: -30px;
 }
 
-.bg-4 {
-	background-color: #2f2f2f;
-	/* Black Gray */
-	color: #fff;
+.category.strong {
+	font-weight: bold;
 }
 
-.container-fluid {
-	padding: 15px 35px;
+.first {
+	padding-left: 15px;
 }
 
-.navbar {
-	background-color: transparent;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	border: 0;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 12px;
-	letter-spacing: 5px;
+.last {
+	padding-right: 15px;
 }
 
-.navbar-nav li a:hover {
-	color: #fff !important;
-
+@media (max-width : 1024px) {
+	.categories {
+		height: 65%;
+	}
+	.dashboard-wrapper {
+		overflow-y: scroll;
+	}
+	.category-text {
+		font-size: 19px;
+		letter-spacing: 0;
+	}
+	.category-text-strong {
+		font-size: 19px;
+		letter-spacing: 0;
+		margin-top: -5px;
+	}
+}
+@media (max-width : 359px){
+	.dashboard-wrapper {
+		height: 70%;
+	}
 }

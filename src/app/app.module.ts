@@ -10,7 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
-
+import { TrendsComponent } from './components/trends/trends.component';
 
 //route of the application
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     DashboardComponent,
     SearchComponent,
+    TrendsComponent,
     FooterComponent
   ],
   imports: [
