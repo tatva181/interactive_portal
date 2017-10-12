@@ -5,7 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { TrendsComponent } from './components/trends/trends.component';
-
+import { ProductsListComponent } from './components/products/products_listing/products_listing.component';
 //routes
 const routes: Routes = [
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +13,7 @@ const routes: Routes = [
 	{ path: 'home', component: HomeComponent },
 	{ path: 'search', component: SearchComponent },
 	{ path: 'trends', component: TrendsComponent },
+	{ path: 'products', component: ProductsListComponent },
 ];
 
 @NgModule({
