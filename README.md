@@ -1,3 +1,3 @@
 # InteractivePortal
 
-AngularJs 4 application
+AngularJs 4 + Laravel application
