@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
+import { ProductsListComponent } from './components/products/products_listing/products_listing.component';
 
 
 //route of the application
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     DashboardComponent,
     SearchComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,ProductsListComponent]
 })
 export class AppModule { }
