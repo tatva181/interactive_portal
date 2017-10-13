@@ -8,7 +8,7 @@
 .listing{
 	margin-top: 100px;
 }
-.listing div{
+/* .listing div{
 	min-height: 450px;
 }
 .listing div img{
@@ -20,6 +20,25 @@
 	font-weight: 700;
 }
 .listing div p{
+	padding: 10px 0;
+	font-size: 17px;
+	font-weight: 400;
+} */
+.listing .product{
+	min-height: 450px;
+}
+.listing a:hover{
+	color: #ffffff;
+}
+.listing .product img{
+	width: 100%;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.listing .product h3{
+	font-weight: 700;
+}
+.listing .product p{
 	padding: 10px 0;
 	font-size: 17px;
 	font-weight: 400;
