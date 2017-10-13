@@ -5,7 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { TrendsComponent } from './components/trends/trends.component';
-import { ProductsListComponent } from './components/products/products_listing/products_listing.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 //routes
 const routes: Routes = [
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },

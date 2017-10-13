@@ -16,6 +16,7 @@ export class ProductsService {
 				];
         return result;
     }
+    
     loadMoreProduct(pageNo) {
     	if(pageNo == 1) {
 	    	const result :any[] = [

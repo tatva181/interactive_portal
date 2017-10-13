@@ -1,0 +1,38 @@
+
+.title_header h4{
+	font-family: Verdana;
+    font-size: 45px;
+    font-weight: normal;
+    letter-spacing: 3px;
+} 
+.listing{
+	margin-top: 100px;
+}
+.listing div{
+	min-height: 450px;
+}
+.listing div img{
+	width: 100%;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.listing div h3{
+	font-weight: 700;
+}
+.listing div p{
+	padding: 10px 0;
+	font-size: 17px;
+	font-weight: 400;
+}
+@media (max-width : 1024px) {
+	.product-wrapper {
+		overflow-y: scroll;
+		height: 85%;
+	}
+
+}
+@media (max-width : 359px){
+	.product-wrapper {
+		height: 79%;
+	}
+}

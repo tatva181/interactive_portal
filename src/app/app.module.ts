@@ -11,7 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { TrendsComponent } from './components/trends/trends.component';
-import { ProductsListComponent } from './components/products/products_listing/products_listing.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 
 //route of the application
 import { AppRoutingModule } from './app-routing.module';
