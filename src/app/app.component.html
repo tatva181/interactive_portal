@@ -1,4 +1,5 @@
 <div class="container col-sm-12" [ngClass] = "{'home': ifHome()}">
+	<div class="loading" *ngIf="process">Loading&#8230;</div>
 	<header *ngIf="!ifHome()" class="row" style="clear: all;">
 		<header-component></header-component>
 	</header>

@@ -2,6 +2,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 //components
 import { AppComponent } from './app.component';
@@ -12,7 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { TrendsComponent } from './components/trends/trends.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
-
+import { ProductsDetailsComponent } from './components/products/products-details/products-details.component';
 //route of the application
 import { AppRoutingModule } from './app-routing.module';
 
@@ -26,14 +31,17 @@ import { AppRoutingModule } from './app-routing.module';
     SearchComponent,
     TrendsComponent,
     FooterComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductsDetailsComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
   providers: [],
-  bootstrap: [AppComponent,ProductsListComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
