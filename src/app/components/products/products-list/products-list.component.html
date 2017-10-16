@@ -9,7 +9,7 @@
 			<p>{{product.description}}</p>
 		</a>
 	</div>
-	<div *ngIf="products" align="center" style="margin-bottom: 50px;">
-		<button class="btn btn-success">Load More</button>
+	<div *ngIf="products && !(len < perPage)" align="center" style="margin-bottom: 50px;">
+		<button class="btn btn-success" (click)="onLoadMore()">Load More</button>
 	</div>
 </div>

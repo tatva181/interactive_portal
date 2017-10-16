@@ -3,12 +3,13 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 import { ProductsService } from '../../../services/products.service';
+import { ConstantsService } from '../../../services/constants.service';
 
 @Component({
 	selector: 'products-details-component',
 	templateUrl: './products-details.component.html',
 	styleUrls: ['./products-details.component.css'],
-	providers: [ProductsService]
+	providers: [ProductsService, ConstantsService]
 })
 export class ProductsDetailsComponent implements OnInit {
 	constructor(
