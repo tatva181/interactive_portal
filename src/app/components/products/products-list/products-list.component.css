@@ -24,21 +24,22 @@
 	font-size: 17px;
 	font-weight: 400;
 } */
-.listing .product{
+:host ::ng-deep .listing .product{
 	min-height: 450px;
 }
-.listing a:hover{
+:host ::ng-deep .listing a:hover{
 	color: #ffffff;
 }
-.listing .product img{
+:host ::ng-deep .listing .product img{
 	width: 100%;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: 'all 0.3s'
 }
-.listing .product h3{
+:host ::ng-deep .listing .product h3{
 	font-weight: 700;
 }
-.listing .product p{
+:host ::ng-deep .listing .product p{
 	padding: 10px 0;
 	font-size: 17px;
 	font-weight: 400;

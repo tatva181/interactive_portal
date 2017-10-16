@@ -1,39 +1,47 @@
 import { Injectable } from '@angular/core';
+import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 
 export class ProductsService {
-	getProduct() {
-		const result: any[] = [
-			{ id: 1, title: "Hazel Pink", description: "Hair makeup and semi-permanent hair color", img: "pink.png" },
-			{ id: 2, title: "#FlauntYourFearless", description: "Strike a pose and rock pink hair for one wash like Shinestruck", img: "curly.png" },
-			{ id: 3, title: "#ClairolColorCrave", description: "Hair makeup and semi-permanent hair color", img: "chinese.png" },
-			{ id: 4, title: "Hazel Pink", description: "Hair makeup and semi-permanent hair color", img: "pink.png" },
-			{ id: 5, title: "#FlauntYourFearless", description: "Strike a pose and rock pink hair for one wash like Shinestruck", img: "curly.png" },
-			{ id: 6, title: "#ClairolColorCrave", description: "Hair makeup and semi-permanent hair color", img: "chinese.png" },
-			{ id: 7, title: "#FlauntYourFearless", description: "Strike a pose and rock pink hair for one wash like Shinestruck", img: "curly.png" },
-			{ id: 8, title: "#ClairolColorCrave", description: "Hair makeup and semi-permanent hair color", img: "chinese.png" },
-		];
-		return result;
+	headers: Headers;
+    options: RequestOptions;
+    constructor(private http: Http) {
+        this.headers = new Headers({ 'Content-Type': 'application/json', 
+                                     'Accept': 'q=0.8;application/json;q=0.9' });
+        this.options = new RequestOptions({ headers: this.headers });
+    }
+
+	loadMoreProduct(pageNo : number,url:string) : Promise<any>{
+		return this.http.post(url,{
+					pageNo: pageNo,
+					action: 'load',
+				}, this.options)
+            .toPromise()
+            .then(
+            	res => {
+            		return res.json();
+				},
+				err => {
+				  console.log("Error occured");
+				}
+			);
 	}
 
-	loadMoreProduct(pageNo) {
-		if (pageNo == 1) {
-			const result: any[] = [
-				{ id: 1, title: "Hazel Pink", description: "Hair makeup and semi-permanent hair color", img: "pink.png" },
-				{ id: 2, title: "#FlauntYourFearless", description: "Strike a pose and rock pink hair for one wash like Shinestruck", img: "curly.png" },
-				{ id: 3, title: "#ClairolColorCrave", description: "Hair makeup and semi-permanent hair color", img: "chinese.png" },
-				{ id: 4, title: "Hazel Pink", description: "Hair makeup and semi-permanent hair color", img: "pink.png" },
-			];
-			return result;
-		} else if (pageNo == 2) {
-			const result: any[] = [
-				{ id: 1, title: "#FlauntYourFearless", description: "Strike a pose and rock pink hair for one wash like Shinestruck", img: "curly.png" },
-				{ id: 2, title: "#ClairolColorCrave", description: "Hair makeup and semi-permanent hair color", img: "chinese.png" },
-			];
-			return result;
-		} else {
-			return '';
-		}
+	getProduct(url:string) : Promise<any>{
+		return this.http.post(url,{
+					action: 'init'
+				}, this.options)
+            .toPromise()
+            .then(
+            	res => {
+            		return res.json();
+				},
+				err => {
+				  console.log("Error occured");
+				}
+			);
 	}
+
 }
