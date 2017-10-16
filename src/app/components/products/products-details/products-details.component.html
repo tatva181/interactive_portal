@@ -1,3 +1,30 @@
-<div class="container">
-    product-details!
+<div class="container col-sm-12 details-wrapper" *ngIf="product">
+    <div class="title-text row col-sm-12">
+        {{product.title}}
+    </div>
+    <div class="col-sm-12 row">
+        <div class="row col-sm-8 video">
+            <img class="img img-responsive" src="/assets/images/homepic.PNG" alt="">
+        </div>
+        <div class="col-sm-4 description">
+            <p class="description-text">
+                {{product.description}}
+            </p>
+            <div class="row col-sm-12 product-container">
+                <div class="product-text">
+                    <strong>Product used for this Look</strong>
+                </div>
+                <div class="product-used first col-sm-6">
+                    <a href="">
+                        <img class="img img-responsive product-img" src="/assets/images/{{product.img}}" alt="product image">
+                    </a>
+                </div>
+                <div class="product-used last col-sm-6">
+                    <a href="">
+                        <img class="img img-responsive product-img" src="/assets/images/{{product.img}}" alt="product image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

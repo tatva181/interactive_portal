@@ -1,9 +1,9 @@
 <div class="container product-wrapper">
 	<div class="title_header">
-		<h4>Latest Trends & Tips</h4>
+		Latest Trends & Tips
 	</div>
-	<div *ngIf="products" class="row listing" #htmlToAdd>
-		<a href="#" *ngFor="let product of products; index as i" class="col-sm-3 product">
+	<div *ngIf="products" class="row listing col-sm-12">
+		<a [routerLink]="['/details', product.id]" *ngFor="let product of products; index as i" class="col-sm-3 product">
 			<img src="/assets/images/{{product.img}}"/>
 			<h3>{{product.title}}</h3>
 			<p>{{product.description}}</p>

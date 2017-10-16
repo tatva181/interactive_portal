@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Location } from '@angular/common';
 import {trigger, state, animate, style, transition} from '@angular/animations';
 
@@ -9,6 +9,7 @@ import {trigger, state, animate, style, transition} from '@angular/animations';
 })
 export class AppComponent {
 	site_name = 'Interactive Portal';
+	process = false;
 	constructor(private _location: Location) { }
 
 	ifHome() : boolean{

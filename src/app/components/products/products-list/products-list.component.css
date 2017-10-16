@@ -1,12 +1,11 @@
 
-.title_header h4{
-	font-family: Verdana;
-    font-size: 45px;
+.title_header{
+    font-size: 60px;
     font-weight: normal;
-    letter-spacing: 3px;
-} 
+    letter-spacing: 1px;
+}
 .listing{
-	margin-top: 100px;
+	margin-top: 25px;
 }
 /* .listing div{
 	min-height: 450px;
@@ -26,6 +25,7 @@
 } */
 :host ::ng-deep .listing .product{
 	min-height: 450px;
+	padding-left: 0px;
 }
 :host ::ng-deep .listing a:hover{
 	color: #ffffff;
@@ -49,10 +49,18 @@
 		overflow-y: scroll;
 		height: 85%;
 	}
+	.title_header {
+		font-size: 28px;
+		letter-spacing: 0;
+	}
 
 }
 @media (max-width : 359px){
 	.product-wrapper {
 		height: 79%;
+	}
+	.title_header {
+		font-size: 19px;
+		letter-spacing: 0;
 	}
 }
