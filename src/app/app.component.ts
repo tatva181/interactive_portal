@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Output, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import {trigger, state, animate, style, transition} from '@angular/animations';
 
@@ -7,12 +7,18 @@ import {trigger, state, animate, style, transition} from '@angular/animations';
 	templateUrl: './app.component.html',
 	styleUrls : ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 	site_name = 'Interactive Portal';
-	process = false;
-	constructor(private _location: Location) { }
+	loading = false;
 
+	constructor(private location: Location) { 
+		this.loading = false;
+	}
+
+	ngOnInit() {
+	}
+	
 	ifHome() : boolean{
-		return this._location.isCurrentPathEqualTo('/home');
+		return this.location.isCurrentPathEqualTo('/home');
 	}
 }

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { ProductsService } from '../../../services/products.service';
-import { ConstantsService } from '../../../services/constants.service';
 import { ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { Subscription }   from 'rxjs/Subscription';
+
+import { ProductsService } from '../../../services/products.service';
+import { ConstantsService } from '../../../services/constants.service';
 
 @Component({
 	selector: 'products-list',
@@ -11,6 +13,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 	styleUrls: ['./products-list.component.css'],
 	providers: [ProductsService, ConstantsService]
 })
+
 export class ProductsListComponent {
 	products: any;
 	loadedProductsTemp: any;
@@ -19,26 +22,39 @@ export class ProductsListComponent {
 	pageNo: number = 1;
 	perPage = 4;
 	len: number;
+	public loading = false;
+
 	@ViewChild('htmlToAdd') d1: ElementRef;
-	constructor(private productService: ProductsService, private constantsService: ConstantsService) { }
+	
+	constructor(
+		private productService: ProductsService,
+		private constantsService: ConstantsService
+	) { }
+
 	ngOnInit() {
+		this.loading = true;
 		this.productService.getProduct(this.constantsService.ajaxUrl).then(
 			res => {
 				this.products = res;
 				this.len = this.products.length;
+				this.loading = false;
 			},
 			err => {
+				this.loading = false;
 				console.log("Error occured");
 			}
 		);
 	}
 
 	onLoadMore() {
+		this.loading = true;
 		this.productService.loadMoreProduct(this.pageNo, this.constantsService.ajaxUrl).then(
 			res => {
 				this.loadSuccessFunction(res);
+				this.loading = false;
 			},
 			err => {
+				this.loading = false;
 				this.loadErrorFunction();
 			}
 		);

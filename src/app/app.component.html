@@ -1,10 +1,12 @@
+<div class="my-container">
+	<ngx-loading [show]="display" ></ngx-loading>
+</div>
 <div class="container col-sm-12" [ngClass] = "{'home': ifHome()}">
-	<div class="loading" *ngIf="process">Loading&#8230;</div>
 	<header *ngIf="!ifHome()" class="row" style="clear: all;">
 		<header-component></header-component>
 	</header>
 	<div class="main container col-sm-12" style="clear: both;">
-		<router-outlet>
+		<router-outlet >
 
 		</router-outlet>
 	</div>
